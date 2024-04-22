@@ -1,0 +1,97 @@
+1) write a function to accept a number and return its square using
+
+a) normal function
+           
+def square_number(num):
+    """Return the square of a given number."""
+    return num * num
+
+number = float(input("Enter a number: "))  # Accept input from the user
+result = square_number(number)
+print("Square of", number, "is", result)
+
+
+b) lambda
+
+square = lambda x: x ** 2
+
+number = 5  # You can change this value to test different numbers
+result = square(number)
+print(f"The square of {number} is {result}")
+
+
+
+2) write a function to display "Hello World" using
+	
+a) normal function
+
+def display_hello_world():
+    print("Hello World")
+
+display_hello_world()
+
+
+b) lambda
+
+display_hello_world = lambda: print("Hello World")
+
+display_hello_world()
+
+
+3) write a function with 2 arguments , second argument should be "default argument" and display them. Using
+
+a) normal function 
+
+def display_arguments(arg1, arg2="default"):
+ 
+    print(f"Argument 1: {arg1}")
+    print(f"Argument 2 (default): {arg2}")
+
+
+display_arguments("value1", "value2")
+
+display_arguments("value1")
+
+
+b) lambda
+
+display_arguments = lambda arg1, arg2="default": print(f"Argument 1: {arg1}, Argument 2: {arg2}")
+
+display_arguments("Hello")
+
+display_arguments("Hello", "World")
+
+
+4) write a function with variable no. of arguments and display them. Using
+
+a) normal function
+
+def display_arguments(*args):
+    """
+    Function to display variable number of arguments.
+
+    Args:
+        *args: Variable number of arguments.
+    """
+   
+    for arg in args:
+        print(arg)
+
+
+display_arguments("Hello", "World")
+display_arguments(1, 2, 3, 4, 5)
+display_arguments("Python", 42, True, None)
+
+
+b) lambda
+
+
+display_arguments = lambda *args: print("Arguments:", args)
+
+
+display_arguments(1, 2, 3)  
+display_arguments("Hello", "World")  
+display_arguments() 
+display_arguments(1, 2.5, "test", [1, 2, 3])  
+
+
